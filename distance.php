@@ -1,8 +1,14 @@
 
 <?php
+require_once __DIR__ . '/vendor/autoload.php';
+
+// API key from env var
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+$apiKey = $_ENV['GOOGLE_MAPS_API_KEY'];
+
 $closest_restaurant = "";
 function getDistance($addressFrom, $addressTo){
-    $apiKey = getenv('GOOGLE_MAPS_API_KEY');
     $city = ", Waterloo, ON, Canada";
 
     
