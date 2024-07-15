@@ -2,8 +2,7 @@
 <?php
 $closest_restaurant = "";
 function getDistance($addressFrom, $addressTo){
-    $apiKey = 'AIzaSyCOnY2nUozHy6-dTAnvvxHZHFgfKL1Rxl8';
-
+    $apiKey = getenv('GOOGLE_MAPS_API_KEY');
     $city = ", Waterloo, ON, Canada";
 
     
